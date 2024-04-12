@@ -1,0 +1,48 @@
+Q1)
+Ans-
+ The var() function in CSS is used to reference and use the value of a custom property (also known as a CSS 
+variable) within your stylesheets. CSS variables are defined using the -- prefix followed by a variable name.
+
+The primary purposes of using the var() function are:
+
+a)Modularity and Reusability: CSS variables allow you to define values once and reuse them multiple times throughout your stylesheet. This promotes modularity in your code and reduces redundancy, making it easier to update styles consistently across your project.
+
+b)Dynamic Value Assignment: CSS variables can be assigned values dynamically, either globally or within specific elements or selectors. This means you can update the value of a variable in one place, and the change will be reflected wherever that variable is used.
+
+c)Theme Management: CSS variables are particularly useful for managing themes in web applications. By defining variables for colors, typography, spacing, and other design attributes, you can create multiple themes and switch between them easily by updating the variable values.
+
+#Two buttons with id named primaryBtn and secondaryBtn which should be given background colors using the var() function. The color code for primaryColor is #00b7ff and secondaryColor is #6c757d.
+
+------HTML CODE------
+<!DOCTYPE html>
+ <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css"/>
+    <title>CSS Variables</title>
+  </head>
+ <body>
+    <button id="primaryBtn">Primary Button</button>
+    <button id="secondaryBtn">Secondary Button</button>
+  </body>
+ </html>
+------CSS CODE------
+ <style>
+    :root {
+      --primaryColor: #00b7ff;
+      --secondaryColor: #6c757d;
+    }
+    button {
+      font-size: 25px;
+      border: none;
+      padding: 5px 20px;
+      color: white;
+    }
+    #primaryBtn {
+      background-color: var(--primaryColor);
+    }
+    #secondaryBtn {
+      background-color: var(--secondaryColor);
+    }
+  </style>
